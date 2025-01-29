@@ -68,7 +68,7 @@ public class DepartmentRepository {
 
     public void deleteById(Integer id){
         String deleteSql = "DELETE FROM departments WHERE id = :id";
-        
+      
         SqlParameterSource param = new MapSqlParameterSource().addValue("id", id);
         
         template.update(deleteSql, param);
